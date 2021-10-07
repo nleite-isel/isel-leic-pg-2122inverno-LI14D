@@ -1,0 +1,27 @@
+Na linha de comandos fazer:
+kotlinc
+
+Este comando irá iniciar o ambiente REPL (Kotlin Read-Eval-Print-Loop).
+
+Introduzir as expressões/instruções:
+
+println("Hello World!") /*Chamada a função */
+
+2 + 5
+
+2 < 5
+
+'Z' -> Char 
+"ABC" -> String
+
+3+2 é uma soma de dois valores do tipo Int e o resultado é também do tipo
+Int, com o valor 5. 
+
+A expressão 'A'+'B', seria a soma de dois valores do tipo Char, mas esta soma
+não é permitida em Kotlin.
+
+Uma expressão é um conjunto de zero ou muitas operações entre valores e o seu resultado é um
+valor de um determinado tipo. Por exemplo, 3, 3+2 e (27-3)/2 são expressões.
+
+
+:quit

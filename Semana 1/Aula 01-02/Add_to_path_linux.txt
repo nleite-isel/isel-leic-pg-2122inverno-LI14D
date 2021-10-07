@@ -1,0 +1,3 @@
+
+% Add Kotlin compiler temporarily to path (Linux)
+export PATH="$HOME/Kotlin/kotlinc/bin:$PATH"
