@@ -1,0 +1,14 @@
+// Elabore um programa em REPL que converta graus Celsius para Fahrenheit, usando a fórmula: 
+// 
+// Cº = 5 * (Fº - 32) / 9 
+//
+
+
+println("Celsius to Fahrenheit")
+
+val celsius : Double = 36.7
+
+celsius // Print val contents
+
+//...
+
