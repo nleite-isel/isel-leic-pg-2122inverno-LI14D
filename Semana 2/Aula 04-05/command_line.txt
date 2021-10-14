@@ -1,0 +1,24 @@
+
+% Criar ficheiro com editor (foi usado o FeatherPad no Linux, mas há outros como Notepad++, Sublime, FeatherPad, etc.)
+featherpad Hello.kt
+
+
+Editar código Kotlin...
+
+
+% Compilar para Java byte code
+kotlinc Hello.kt
+
+% Aqui é gerado um ficheiro .class (java byte code)
+
+
+% Invocar interpretador java.exe com o ficheiro .class (mas sem colocar a extensão .class)
+java HelloKt
+% Ou invocar interpretador kotlin.exe (equivalente)
+kotlin HelloKt
+
+%////////////////////////////////////
+
+% Ativar o REPL (Read Eval Print Loop)
+
+kotlinc
