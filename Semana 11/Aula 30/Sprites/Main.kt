@@ -20,7 +20,7 @@ const val IMAGE_HEIGHT = 200
 const val ORIG_X = 100
 const val ORIG_Y = 100
 
-const val FRAME_PERIOD = 500
+const val FRAME_PERIOD = 1000
 
 fun drawActor(canvas: Canvas, spriteCoords: String) {
     canvas.drawRect(ORIG_X, ORIG_Y, IMAGE_WIDTH, IMAGE_HEIGHT, thickness = 1)
@@ -43,16 +43,13 @@ fun main() {
         // Draw actor
         drawActor(canvas, spriteCoords)
 
-        var first = true
         canvas.onTimeProgress(FRAME_PERIOD) {
             animationStep = (animationStep + 1) % SPRITESHEET_COLUMNS
+            // Each time the animationStep == 0, increment direction
             if (animationStep == 0) {
-                if (first)
-                    first = false
-                else
-                    direction = (direction + 1) % SPRITESHEET_ROWS
+                direction = (direction + 1) % SPRITESHEET_ROWS
             }
-            // Redraw
+            // Recalculate sprite coordinates
             spriteRectX = animationStep * SPRITE_WIDTH
             spriteRectY = direction * SPRITE_HEIGHT
 
@@ -60,7 +57,7 @@ fun main() {
             println(spriteCoords)
 
             canvas.erase()
-            // Draw actor
+            // Redraw actor
             drawActor(canvas, spriteCoords)
         }
     }
